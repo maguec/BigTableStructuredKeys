@@ -1,0 +1,49 @@
+{
+  "fields": [
+    {
+      "fieldName": "customer_id",
+      "type": {
+        "stringType": {
+          "encoding": {
+            "utf8Bytes": {}
+          }
+        }
+      }
+    },
+    {
+      "fieldName": "site_id",
+      "type": {
+        "stringType": {
+          "encoding": {
+            "utf8Bytes": {}
+          }
+        }
+      }
+    },
+    {
+      "fieldName": "sensor_id",
+      "type": {
+        "stringType": {
+          "encoding": {
+            "utf8Bytes": {}
+          }
+        }
+      }
+    },
+    {
+      "fieldName": "timestamp",
+      "type": {
+        "bytesType": {
+          "encoding": {
+            "raw": {}
+          }
+        }
+      }
+    }
+  ],
+  "encoding": {
+    "delimitedBytes": {
+      "delimiter": "Iw=="
+    }
+  }
+}
