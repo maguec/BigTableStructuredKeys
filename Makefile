@@ -13,5 +13,5 @@ btload: ## load csv data into the BigTable
 	@cbt  -instance structerdkeys -project mague-tf  import mydata data.csv column-family=data
 
 btdelete: ## Shutdown the BigTable 
-	@gcloud bigtable instances delete structerdkeys
+	@echo "Y" | gcloud bigtable instances delete structerdkeys
 
