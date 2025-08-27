@@ -33,7 +33,10 @@ SELECT * FROM mydata LIMIT 10;
 
 Find all of the sensors
 ```sql
-SELECT DISTINCT(sensor_id) FROM mydata WHERE customer_id="customer7" AND site_id="site3" ORDER BY sensor_id DESC;
+SELECT DISTINCT(sensor_id)
+FROM mydata 
+WHERE customer_id="customer7" AND site_id="site3" 
+ORDER BY sensor_id DESC;
 ```
 
 Convert some numbers get the the min/max/avg with [Aggregate Functions](https://cloud.google.com/bigtable/docs/reference/sql/aggregate_functions)
@@ -46,7 +49,7 @@ SELECT
   FROM mydata WHERE customer_id="customer7" AND site_id="site3";
 ```
 
-Show some time converstion
+Show some [time converstion](https://cloud.google.com/bigtable/docs/reference/sql/timestamp_functions#timestamp_from_unix_seconds)
 
 ```sql
 SELECT
