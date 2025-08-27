@@ -4,9 +4,9 @@ Example of using row key schemas on Bigtable for some timeseries fun
 
 ## Prerequisites
 
-[gcloud](https://cloud.google.com/sdk/docs/install)
-[cbt](https://cloud.google.com/bigtable/docs/cbt-overview#installing)
-make
+- [gcloud](https://cloud.google.com/sdk/docs/install)
+- [cbt](https://cloud.google.com/bigtable/docs/cbt-overview#installing)
+- make
 
 ## Setup Gcloud 
 
