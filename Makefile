@@ -14,7 +14,7 @@ btcreate: ## Spin up a single node BigTable
 	@gcloud beta bigtable tables update mydata --instance=structerdkeys --project $(GCP_PROJECT) --row-key-schema-definition-file=schemadef.json --row-key-schema-pre-encoded-bytes
 
 btload: ## load csv data into the BigTable
-	@cbt  -instance structerdkeys -project $(GCP_PROJECT)  import mydata data.csv column-family=data
+	@cbt  -instance structerdkeys -project $(GCP_PROJECT)  import mydata data.csv column-family=data batch-size=1000 workers=5
 
 btdelete: ## Shutdown the BigTable 
 	@echo "Y" | gcloud bigtable instances delete structerdkeys
