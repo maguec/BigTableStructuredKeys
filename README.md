@@ -4,7 +4,7 @@ Example of using row key schemas on Bigtable for some timeseries fun
 
 ## TLDR
 
-By creating a RowKey Schema it is then possible to query the row key more like a SQL table with many different indexes.
+By creating a [RowKey Schema](https://cloud.google.com/bigtable/docs/manage-row-key-schemas) it is then possible to query the row key more like a SQL table with many different indexes.
 
 In this example we create a rowkey with the following format
 
