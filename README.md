@@ -2,6 +2,36 @@
 
 Example of using row key schemas on Bigtable for some timeseries fun
 
+## TLDR
+
+By creating a RowKey Schema it is then possible to query the row key more like a SQL table with many different indexes.
+
+In this example we create a rowkey with the following format
+
+```
+customer_id#site_id#sensor_id#timestamp
+customer1#site1#122#1760047153  humidity=56,temperature=78
+customer1#site1#124#1760047153  humidity=56,temperature=82
+customer1#site1#122#1760048153  humidity=55,temperature=79
+customer1#site1#124#1760048153  humidity=55,temperature=81
+```
+
+
+This allows us the equivalent of the following SQL table that we can query
+
+| customer_id | site_id | sensor_id | timestamp | data |
+| --- | --- | --- | --- |
+| customer1 | site1 | 122 | 1760047153 | humidity=56,temperature=78 |
+| customer1 | site1 | 124 | 1760047153 | humidity=56,temperature=82 |
+| customer1 | site1 | 122 | 1760048153 | humidity=55,temperature=79 |
+| customer1 | site1 | 124 | 1760048153 | humidity=55,temperature=81 |
+
+```sql
+select sensor_id, data['humidity'] from mydata
+    WHERE customer_id = "customer_1" AND site_id = "site1"
+```
+
+
 ## Prerequisites
 
 - [gcloud](https://cloud.google.com/sdk/docs/install)
