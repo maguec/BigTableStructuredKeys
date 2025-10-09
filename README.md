@@ -9,7 +9,7 @@ By creating a RowKey Schema it is then possible to query the row key more like a
 In this example we create a rowkey with the following format
 
 ```
-customer_id#site_id#sensor_id#timestamp
+customer_id#site_id#sensor_id#timestamp 
 customer1#site1#122#1760047153  humidity=56,temperature=78
 customer1#site1#124#1760047153  humidity=56,temperature=82
 customer1#site1#122#1760048153  humidity=55,temperature=79
@@ -20,7 +20,7 @@ customer1#site1#124#1760048153  humidity=55,temperature=81
 This allows us the equivalent of the following SQL table that we can query
 
 | customer_id | site_id | sensor_id | timestamp | data |
-| --- | --- | --- | --- |
+|-----|-----|-----|-----|-----|
 | customer1 | site1 | 122 | 1760047153 | humidity=56,temperature=78 |
 | customer1 | site1 | 124 | 1760047153 | humidity=56,temperature=82 |
 | customer1 | site1 | 122 | 1760048153 | humidity=55,temperature=79 |
